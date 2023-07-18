@@ -24,7 +24,7 @@ public class App
         joueurController.createPlayer();*/
 
         EpreuveController controller = new EpreuveController();
-        controller.afficheRollandGarros();
+        controller.afficheDernierEpreuve();
 
     }
 }

@@ -1,5 +1,6 @@
 package com.mycompany.tennis.controller;
 
+import com.mycompany.tennis.core.dto.TournoiDto;
 import com.mycompany.tennis.core.entity.Joueur;
 import com.mycompany.tennis.core.entity.Tournoi;
 import com.mycompany.tennis.core.repository.TournoiDatabaseRepositoryInterface;
@@ -21,7 +22,7 @@ public class TournoiController {
         System.out.println("Quel est l'id du tournoi dont vous voulez afficher les informations");
         Long id = scanner.nextLong();
 
-        Tournoi tournoi = this.tournoiService.getTournoi(id);
+        TournoiDto tournoi = this.tournoiService.getTournoi(id);
         System.out.printf("Le tournioi est %s %s \n",tournoi.getNom(), tournoi.getCode());
     }
 
@@ -32,7 +33,7 @@ public class TournoiController {
         System.out.println("Quel est le code du nouveau tournoi? ");
         String code = scanner.nextLine();
 
-        Tournoi tournoi = new Tournoi();
+        TournoiDto tournoi = new TournoiDto();
         tournoi.setNom(nom);
         tournoi.setCode(code);
         tournoiService.createTournoi(tournoi);
