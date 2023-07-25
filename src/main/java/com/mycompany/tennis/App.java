@@ -1,9 +1,6 @@
 package com.mycompany.tennis;
 
-import com.mycompany.tennis.controller.EpreuveController;
-import com.mycompany.tennis.controller.JoueurController;
-import com.mycompany.tennis.controller.ScoreController;
-import com.mycompany.tennis.controller.TournoiController;
+import com.mycompany.tennis.controller.*;
 
 /**
  * Hello world!
@@ -23,8 +20,10 @@ public class App
         /*JoueurController joueurController = new JoueurController();
         joueurController.createPlayer();*/
 
-        EpreuveController controller = new EpreuveController();
-        controller.afficheDernierEpreuve();
+       /* EpreuveController controller = new EpreuveController();
+        controller.afficheDernierEpreuve();*/
 
+        MatchController controller = new MatchController();
+        controller.afficherMatch();
     }
 }
