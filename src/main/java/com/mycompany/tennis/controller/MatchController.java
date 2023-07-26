@@ -23,6 +23,7 @@ public class MatchController {
         MatchDto match = this.matchService.getMatchById(id);
         System.out.println("Le vainqueur du match est :" + match.getVainqueur().getNom());
         System.out.println("Le finaliste du match est :" + match.getFinaliste().getNom());
+        System.out.println("Il s'agit d'un match de : " + match.getEpreuve().getAnnee() + " qui s'est déroulé à " + match.getEpreuve().getTournoi().getNom());
 
     }
 
