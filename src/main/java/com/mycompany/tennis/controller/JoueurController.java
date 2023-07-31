@@ -1,5 +1,6 @@
 package com.mycompany.tennis.controller;
 
+import com.mycompany.tennis.core.dto.JoueurDto;
 import com.mycompany.tennis.core.entity.Joueur;
 import com.mycompany.tennis.core.service.JoueurService;
 
@@ -65,6 +66,20 @@ public class JoueurController {
 
 
         joueurService.removePlayer(id);
+    }
+
+    public void afficheListJoueur(){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Souhaitez-vous connaître la liste des hommes ou des femmes ? ");
+        char sexe = sc.nextLine().charAt(0);
+
+        for (JoueurDto joueur :
+                this.joueurService.listJoueurs(sexe)) {
+
+            System.out.println(joueur.getNom() + " " + joueur.getPrenom());
+
+        }
     }
 
 

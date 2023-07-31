@@ -1,5 +1,8 @@
 package com.mycompany.tennis;
 
+import com.mycompany.tennis.controller.EpreuveController;
+import com.mycompany.tennis.controller.JoueurController;
+import com.mycompany.tennis.controller.MatchController;
 import com.mycompany.tennis.controller.ScoreController;
 
 /**
@@ -10,8 +13,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        ScoreController controller = new ScoreController();
-        controller.scoreById();
+        JoueurController controller = new JoueurController();
+        controller.afficheListJoueur();
+
+
 
     }
 }
